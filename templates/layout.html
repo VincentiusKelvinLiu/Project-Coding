@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        main {
+            padding: 10px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: khaki;
+        }
+        .socials a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: inherit;
+        }
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+        nav a {
+            text-decoration: none;
+            color: red;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 30px;
+        }
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .Logo {
+            width: 100%; 
+            margin-bottom: 20px;
+        }
+        .Logo img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: -90px;
+        }
+        .footer {
+            font-size: larger;
+            margin-left: 350px;
+            margin-top: -10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 3.0rem;
+            font: bold 50px "Verdana";
+        }
+        .primary_nav_warp {
+            display: flex;
+            justify-content: center;
+            margin-top: -200px;
+            background-color: white;
+            margin-bottom: 20px;
+            margin-left: 350px;
+        }
+        .primary_nav_warp ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 60px;
+        }
+        .primary_nav_warp ul li {
+            display: inline-flex;
+        }
+        .primary_nav_warp a {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .current-menu-item {
+            color: red;
+            font-size: 1.2rem;
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 550px;
+            margin: 20px auto; 
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: none;
+            text-align: center; 
+        }
+
+        .slides img {
+            display: inline-block; 
+            width: 100%;
+            margin-top: 100px;
+            height: 700px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .dot-container {
+            text-align: center;
+            padding: 10px;
+            background: black;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: grey;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: grey;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="left socials">
+            <div class="icons">
+                <a href=""><i class='bx bxl-instagram-alt'></i></a>
+                <a href=""><i class='bx bxl-twitter'></i></a>
+                <a href=""><i class='bx bxl-facebook-square'></i></a>
+                <a href=""><i class='bx bxl-tiktok'></i></a>
+                <a href=""><i class='bx bxl-reddit'></i></a>
+                <a href=""><i class='bx bxl-youtube'></i></a>
+            </div>
+        </div>
+        <nav>
+            <a href="">news</a>
+            <a href="">login</a>
+            <a href="">sign up</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <p class="footer">CultureFlex</p>
+            <div class="Logo">
+                <img src="../static/CGV_logo.jpg" alt="" style="width: 350px; height: 200px;">
+            </div>
+        </div>
+        <nav class="primary_nav_warp">
+            <ul>
+                <li class="current-menu-item">
+                    <a href="">MOVIES</a>
+                </li>
+                <li>
+                    <a href="">CINEMAS</a>
+                </li>
+                <li>
+                    <a href="">PROMOTION</a>
+                </li>
+                <li>
+                    <a href="">MEMBERSHIP</a>
+                </li>
+                <li>
+                    <a href="">CONCESSION</a>
+                </li>
+                <li>
+                    <a href="">SPECIAL</a>
+                </li>
+            </ul>
+        </nav>
+    </main>    
+
+    <div class="slideshow-container">
+
+        <div class="slides fade">
+            <img src="../static/640px-The_Raid_Poster.jpeg" alt="Movie 1">
+        </div>
+
+        <div class="slides fade">
+            <img src="../static/Godzilla_vs._Kong.png" alt="Movie 2">
+        </div>
+
+        <div class="slides fade">
+            <img src="../static/godzilla x kong the new empire.webp" alt="Movie 3">
+        </div>
+
+        <div class="slides fade">
+            <img src="../static/film-escape_34.jpeg" alt="Movie 4">
+        </div>
+
+        <div class="slides fade">
+            <img src="../static/my way.jpg" alt="Movie 5">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+        <span class="dot" onclick="currentSlide(4)"></span> 
+        <span class="dot" onclick="currentSlide(5)"></span> 
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+</body>
+</html>
